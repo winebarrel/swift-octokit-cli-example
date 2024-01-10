@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "octokit-cli",
+    platforms: [
+        .macOS(.v14),
+    ],
     dependencies: [
         .package(url: "https://github.com/nerdishbynature/octokit.swift", from: "0.11.0"),
     ],
