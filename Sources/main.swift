@@ -13,8 +13,8 @@ print(user.name!)
 let ns = try! await withCheckedThrowingContinuation { continuation in
     octokit.myNotifications { response in
         switch response {
-        case let .success(n):
-            continuation.resume(returning: n)
+        case let .success(notifications):
+            continuation.resume(returning: notifications)
         case let .failure(error):
             continuation.resume(throwing: error)
         }
